@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 
 import com.bolsadeideas.springboot.di.app.models.domain.ItemFactura;
 import com.bolsadeideas.springboot.di.app.models.domain.Producto;
@@ -14,6 +16,9 @@ import com.bolsadeideas.springboot.di.app.models.services.MiServicio;
 import com.bolsadeideas.springboot.di.app.models.services.MiServicioComplejo;
 
 @Configuration
+@PropertySources({
+	@PropertySource("classpath:textos.properties")
+})
 public class AppConfig {
 	
 	@Primary

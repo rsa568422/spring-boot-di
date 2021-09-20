@@ -10,6 +10,10 @@ public class ItemFactura {
 		this.producto = producto;
 		this.cantidad = cantidad;
 	}
+	
+	public Integer calcularImporte() {
+		return this.cantidad * this.producto.getPrecio();
+	}
 
 	public Producto getProducto() {
 		return producto;
