@@ -27,7 +27,7 @@ public class Factura implements Serializable {
 	private List<ItemFactura> items;
 	
 	@PostConstruct
-	public void  inicializar() {
+	public void inicializar() {
 		this.cliente.setNombre(String.format("%s José", cliente.getNombre()));
 		this.descripcion = String.format("%s del cliente: %s", this.descripcion, cliente.getNombre());
 	}
