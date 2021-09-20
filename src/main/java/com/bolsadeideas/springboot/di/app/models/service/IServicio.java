@@ -1,4 +1,4 @@
-package com.bolsadeideas.springboot.di.app.models.services;
+package com.bolsadeideas.springboot.di.app.models.service;
 
 public interface IServicio {
 

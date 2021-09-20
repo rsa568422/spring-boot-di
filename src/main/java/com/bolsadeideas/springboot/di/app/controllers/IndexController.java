@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.bolsadeideas.springboot.di.app.models.services.IServicio;
+import com.bolsadeideas.springboot.di.app.models.service.IServicio;
 
 @Controller
 public class IndexController {

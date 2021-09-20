@@ -6,21 +6,16 @@ import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
 
 import com.bolsadeideas.springboot.di.app.models.domain.ItemFactura;
 import com.bolsadeideas.springboot.di.app.models.domain.Producto;
-import com.bolsadeideas.springboot.di.app.models.services.IServicio;
-import com.bolsadeideas.springboot.di.app.models.services.MiServicio;
-import com.bolsadeideas.springboot.di.app.models.services.MiServicioComplejo;
+import com.bolsadeideas.springboot.di.app.models.service.IServicio;
+import com.bolsadeideas.springboot.di.app.models.service.MiServicio;
+import com.bolsadeideas.springboot.di.app.models.service.MiServicioComplejo;
 
 @Configuration
-@PropertySources({
-	@PropertySource("classpath:textos.properties")
-})
 public class AppConfig {
-	
+
 	@Primary
 	@Bean("miServicioSimple")
 	public IServicio registrarMiServicio() {
@@ -42,7 +37,7 @@ public class AppConfig {
 		
 		return Arrays.asList(linea1, linea2);
 	}
-	
+
 	@Primary
 	@Bean("itemsFacturaOficina")
 	public List<ItemFactura> registrarItemsOficina() {
